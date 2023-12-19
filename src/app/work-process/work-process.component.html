@@ -1,0 +1,33 @@
+<div class="main-section work-process-view1-full" id="workProcess">
+    <span class="light-transparent"></span>
+    <div class="work-process-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="fancy-title-view1 fancy-title-view1-color">
+                        <h2>Our Work Process</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Etiam in dui velit Fusce accumsan.</p>
+                    </div>
+                    <div class="work-process work-process-view1">
+                        <ul class="row p-0 justify-content-center">
+                            <li class="col-md-4 col-sm-6 col-12" *ngFor="let process of processItem">
+                                <div class="work-process-view1-wrap">
+                                    <i [class]="process.icon"></i>
+                                    <a href="#">
+                                        {{process.processName}}
+                                    </a>
+                                    <small>
+                                        {{process.processDescription}}
+                                    </small>
+                                    <span>
+                                        {{process.processNumber}}
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

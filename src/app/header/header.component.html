@@ -1,0 +1,49 @@
+<nav id="singlepage-nav" class="navbar navbar-expand-lg" [ngClass]="{'scrolled': isScrolled}">
+    <div class="container">
+        <a draggable="false" class="navbar-brand">
+            <img src="../../assets/Images/logo.png" class="img-fluid" alt="Skyline Infosoft" />Skyline <span>Infosoft</span>
+        </a>
+        <button class="nav-toggle d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="justify-content-end d-lg-block d-none" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item mx-1 mx-xl-2 dropdown-sec" *ngFor="let menuItem of menuItems">
+                    <!-- <a class="nav-link scrollto" [routerLink]="menuItem.link" [ngClass]="{'active': menuItem.isActive}" (click)="headerActive(menuItem.link)">
+                        {{ menuItem.label }} <i *ngIf="menuItem.subItems" class="fas fa-angle-down ms-2"></i>
+                    </a> -->
+                    <a class="nav-link scrollto" [routerLink]="menuItem.link" routerLinkActive="active" [ngClass]="{'active': menuItem.isActive}" (click)="scrollTo(menuItem)">
+                        {{ menuItem.label }} <i *ngIf="menuItem.subItems" class="fas fa-angle-down ms-2"></i>
+                    </a>
+                    <ul class="dropdown-section" aria-labelledby="navbarDropdown" *ngIf="menuItem.subItems">
+                        <li *ngFor="let subItem of menuItem.subItems">
+                            <a [routerLink]="subItem.link">
+                                {{ subItem.label }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Skyline Infosoft</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item mx-2 dropdown-sec" *ngFor="let menuItem of menuItems">
+                    <a class="nav-link scrollto" [routerLink]="menuItem.link">
+                        {{ menuItem.label }} <i *ngIf="menuItem.subItems" class="fas fa-angle-down ms-2"></i>
+                    </a>
+                    <ul class="dropdown-section" aria-labelledby="navbarDropdown" *ngIf="menuItem.subItems">
+                        <li *ngFor="let subItem of menuItem.subItems">
+                            <a [routerLink]="subItem.link">
+                                {{ subItem.label }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

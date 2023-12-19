@@ -1,0 +1,86 @@
+.contact_us {
+    padding: 120px 0px;
+
+    .contact_inner {
+        background-color: #fff;
+        position: relative;
+        box-shadow: 20px 22px 44px #cccc;
+        border-radius: 25px;
+
+        .contact_field {
+            padding: 60px 340px 90px 100px;
+            @media screen and (max-width:991px) {
+                padding: 20px;
+            }
+            @media (min-width:991px) and (max-width:1200px) {
+                padding: 60px 270px 90px 50px;
+            }
+            h3 {
+                color: #000;
+                font-size: 40px;
+                letter-spacing: 1px;
+                font-weight: 600;
+                margin-bottom: 10px
+            }
+            p {
+                color: #000;
+                font-size: 13px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                margin-bottom: 35px;
+            }
+            .form-control {
+                border-radius: 0px;
+                border: none;
+                border-bottom: 1px solid #ccc;
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                    border-bottom: 2px solid #1325e8;
+                }
+                &::placeholder {
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                }
+            }
+            .error-message {
+                font-size: 14px;
+                color: red;
+                font-weight: 500;
+            }
+            .error-box {
+                border-bottom: 2px solid red;
+            }
+        }
+        .contact_info_sec {
+            position: absolute;
+            background-color: #2d2d2d;
+            color: #fff;
+            right: 1px;
+            top: 18%;
+            height: 340px;
+            width: 340px;
+            padding: 40px;
+            border-radius: 25px 0 0 25px;
+            @media screen and (max-width: 991px) {
+                position: unset;
+                width: 100%;
+                margin-top: 10px;
+            }
+            h4 {
+                letter-spacing: 1px;
+                padding-bottom: 15px;
+            }
+            .info_single {
+                margin: 30px 0px;
+                i {
+                    margin-right: 15px;
+                }
+                span {
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
