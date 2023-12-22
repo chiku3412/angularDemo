@@ -14,7 +14,6 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { WorkProcessComponent } from './work-process/work-process.component';
 import { TechnologyComponent } from './technology/technology.component';
-import { ContactDataModelComponent } from './model/contact-data-model/contact-data-model.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +26,7 @@ import { ContactDataModelComponent } from './model/contact-data-model/contact-da
     ContactComponent,
     FooterComponent,
     WorkProcessComponent,
-    TechnologyComponent,
-    ContactDataModelComponent
+    TechnologyComponent
   ],
   imports: [
     BrowserModule,

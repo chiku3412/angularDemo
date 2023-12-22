@@ -1,7 +1,7 @@
 @import '../../assets/css/color.scss';
 
 .work-process-view1-full {
-    padding: 80px 0px 80px 0px;
+    padding: 100px 0;
     margin-top: 0;
     margin-bottom: 0;
     background: url(https://i.ibb.co/r4xf3sK/newslater.jpg);
@@ -21,27 +21,6 @@
         position: relative;
         z-index: 999;
     }
-    .fancy-title-view1 {
-        float: left;
-        width: 100%;
-        margin-bottom: 70px;
-        text-align: center;
-        h2 {
-            margin-bottom: 8px;
-            font-size: 40px;
-            font-weight: 700;
-            display: block;
-            color: $white;
-        }
-        i {
-            font-size: 22px; }
-        p {
-            margin-bottom: 0px;
-            display: inline-block;
-            width: 65%;
-            color: $white;
-        }
-    }
     .work-process {
         float: left;
         width: 100%;
@@ -55,7 +34,7 @@
                 &:hover {
                     i {
                         color: $white;
-                        background-color: #274160;
+                        background-color: $main-color;
                     }
                 }
             }

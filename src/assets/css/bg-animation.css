@@ -1,0 +1,109 @@
+.bg-animation-sec {
+  position: relative;
+  z-index: 1;
+}
+.bg-animation-sec .shape1 {
+  top: 20%;
+  left: 30px;
+  animation: rotate3d 4s linear infinite;
+  opacity: 0.4;
+}
+.bg-animation-sec .shape1, .bg-animation-sec .shape2 {
+  position: absolute;
+  z-index: -1;
+}
+.bg-animation-sec .shape2 {
+  top: 60%;
+  left: 15%;
+}
+.bg-animation-sec .shape3 {
+  left: 25%;
+  animation: animationFramesOne 15s linear infinite;
+}
+.bg-animation-sec .shape3, .bg-animation-sec .shape4 {
+  position: absolute;
+  bottom: 15%;
+  z-index: -1;
+}
+.bg-animation-sec .shape4 {
+  right: 25%;
+  animation: animationFramesOne 20s linear infinite;
+}
+.bg-animation-sec .shape5 {
+  right: 5%;
+  top: 10%;
+  animation: movebounce 5s linear infinite;
+  opacity: 0.2;
+}
+.bg-animation-sec .shape5, .bg-animation-sec .shape6 {
+  position: absolute;
+  z-index: 9;
+}
+.bg-animation-sec .shape6 {
+  top: 40%;
+  right: 10%;
+}
+.bg-animation-sec .shape7 {
+  left: 25%;
+  animation: animationFramesOne 20s linear infinite;
+}
+.bg-animation-sec .shape7, .bg-animation-sec .shape8 {
+  position: absolute;
+  top: 15%;
+  z-index: -1;
+}
+.bg-animation-sec .shape8 {
+  right: 10%;
+}
+
+@keyframes movebounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes moveleftbounce {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.rotateme {
+  animation-name: rotateme;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotateme {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes rotate3d {
+  0% {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(1turn);
+  }
+}
+.bg-bottom {
+  background: url(../../assets/Images/banner-waves-3_iwmett.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

@@ -15,6 +15,9 @@
                                     </p>
                                     <!-- get the data using form control Name -->
                                     <form [formGroup]="myForm">
+                                        <!-- <p>
+                                            {{myForm.value|json}}
+                                        </p> -->
                                         <input type="text" formControlName="name" class="form-control" placeholder="Name" required />
                                         <div *ngIf="firstGroup['name']?.invalid && isSubmitted" class="error-message">
                                             Name is required.
@@ -32,16 +35,6 @@
                                             Submit
                                         </button>
                                     </form>
-
-                                    <!-- get the data using id -->
-                                    <!-- <form>
-                                        <input type="text" [(ngModel)]="userName" id="name" class="form-control" placeholder="Name" required />
-                                        <input type="text" [(ngModel)]="userEmail" id="email" class="form-control my-4" placeholder="Email" required />
-                                        <textarea class="form-control" [(ngModel)]="userMessage" id="message" placeholder="Message" required></textarea>
-                                        <button type="submit" class="theme-btn btn-solid mt-4 w-100" (click)="onSubmit()">
-                                            Submit
-                                        </button>
-                                    </form> -->
                                 </div>
                             </div>
                         </div>
@@ -73,6 +66,5 @@
                 </div>
             </div>
         </div>
-        <app-contact-data-model [showModal]="showModal" (closeModal)="closeModal()"></app-contact-data-model>
     </div>
 </section>

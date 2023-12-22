@@ -1,1 +1,40 @@
-<p>portfolio works!</p>
+<section id="portfolio" class="portfolio-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="fancy-title-view1">
+                    <h2>Our Portfolio</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Etiam in dui velit Fusce accumsan.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="filter-section">
+                    <ul>
+                        <li *ngFor="let filterBtn of filterBtns">
+                            <a (click)="handlePortfolioManage(filterBtn.name)" [ngClass]="{'active':(portFolioNameActive === filterBtn.name)}">
+                                {{ filterBtn.filterName }}
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="filter-box">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-12" *ngFor="let filterBox of manageFilterBoxes" [ngClass]="{'fadeIn':(portFolioNameActive === filterBox.name)}">
+                                <div class="box">
+                                    <img [src]="filterBox.filterBoxImage" class="img-fluid" alt="Images" />
+                                    <div class="content">
+                                        <h5>
+                                            {{ filterBox.filterBoxName }}
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

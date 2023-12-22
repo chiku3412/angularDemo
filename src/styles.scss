@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'assets/css/bg-animation.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -76,5 +78,26 @@ html {
         height: 100%;
         transform: scaleX(1);
         transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+}
+.fancy-title-view1 {
+    float: left;
+    width: 100%;
+    margin-bottom: 70px;
+    text-align: center;
+    h2 {
+        margin-bottom: 8px;
+        font-size: 40px;
+        font-weight: 700;
+        display: block;
+        color: #fff;
+    }
+    i {
+        font-size: 22px; }
+    p {
+        margin-bottom: 0px;
+        display: inline-block;
+        width: 65%;
+        color: #fff;
     }
 }

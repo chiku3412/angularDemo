@@ -1,0 +1,68 @@
+@import '../../assets/css/color.scss';
+
+.portfolio-section {
+    padding: 100px 0;
+    background-color: $bg-gray;
+    .fancy-title-view1 {
+        h2, p {
+            color: $black;
+        }
+    }
+    .filter-section {
+        ul {
+            display: flex;
+            padding: 0;
+            margin-bottom: 50px;
+            justify-content: center;
+            li {
+                margin: 0 10px;
+                a {
+                    cursor: pointer;
+                    color: $light-gray;
+                    transition: all 0.5s;
+                    font-weight: 600;
+                    &:hover {
+                        transition: all 0.5s;
+                        color: $black;
+                    }
+                    &.active {
+                        transition: all 0.5s;
+                        color: $black;
+                    }
+                }
+            }
+        }
+        .filter-box {
+            .box {
+                box-shadow: 0 0 10px $gainsboro;
+                border-radius: 5px;
+                padding: 10px;
+                transform: translateY(10px);
+                transition: all 0.5s;
+                cursor: pointer;
+                .content {
+                    padding-top: 10px;
+                    h5 {
+                        margin: 0;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        letter-spacing: 1px;
+                        font-size: 17px;
+                        text-align: center;
+                    }
+                }
+                &:hover {
+                    transform: translateY(0);
+                    transition: all 0.5s;
+                }
+            }
+        }
+    } 
+}
+.fadeIn {
+    animation: fadeInAnimation 0.5s ease-in-out;
+}  
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

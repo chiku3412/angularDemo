@@ -1,0 +1,36 @@
+<section id="service" class="service-section bg-animation-sec bg-bottom">
+    <div class="container">
+        <div class="row pb-4">
+            <div class="col-12 text-center">
+                <div class="fancy-title-view1">
+                    <h2>Our Services</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Etiam in dui velit Fusce accumsan.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-12 mt-4" *ngFor="let service of services">
+                <div class="card">
+                    <div class="icon-wrapper">
+                        <i [class]="service.serviceIcon"></i>
+                    </div>
+                    <h3>
+                        {{ service.serviceName }}
+                    </h3>
+                    <p>
+                        {{ service.serviceDescription }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="shape1"><img draggable="false" src="../../assets/Images/shape1.png" alt="shape" loading="lazy"></div>
+    <div class="shape3"><img draggable="false" src="../../assets/Images/shape3.svg" alt="shape" loading="lazy"></div>
+    <div class="shape4"><img draggable="false" src="../../assets/Images/shape4.svg" alt="shape" loading="lazy"></div>
+    <div class="shape5"><img draggable="false" src="../../assets/Images/shape5.png" alt="shape" loading="lazy"></div>
+    <div class="shape6 rotateme"><img draggable="false" src="../../assets/Images/shape4.svg" alt="shape" loading="lazy">
+    </div>
+    <div class="shape7"><img draggable="false" src="../../assets/Images/shape4.svg" alt="shape" loading="lazy"></div>
+    <div class="shape8 rotateme"><img draggable="false" src="../../assets/Images/shape2.svg" alt="shape" loading="lazy">
+    </div>
+</section>

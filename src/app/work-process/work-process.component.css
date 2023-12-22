@@ -1,5 +1,5 @@
 .work-process-view1-full {
-  padding: 80px 0px 80px 0px;
+  padding: 100px 0;
   margin-top: 0;
   margin-bottom: 0;
   background: url(https://i.ibb.co/r4xf3sK/newslater.jpg);
@@ -19,28 +19,6 @@
   position: relative;
   z-index: 999;
 }
-.work-process-view1-full .fancy-title-view1 {
-  float: left;
-  width: 100%;
-  margin-bottom: 70px;
-  text-align: center;
-}
-.work-process-view1-full .fancy-title-view1 h2 {
-  margin-bottom: 8px;
-  font-size: 40px;
-  font-weight: 700;
-  display: block;
-  color: #ffffff;
-}
-.work-process-view1-full .fancy-title-view1 i {
-  font-size: 22px;
-}
-.work-process-view1-full .fancy-title-view1 p {
-  margin-bottom: 0px;
-  display: inline-block;
-  width: 65%;
-  color: #ffffff;
-}
 .work-process-view1-full .work-process {
   float: left;
   width: 100%;
@@ -54,7 +32,7 @@
 }
 .work-process-view1-full .work-process ul li:hover i {
   color: #ffffff;
-  background-color: #274160;
+  background-color: #4899f0;
 }
 .work-process-view1-full .work-process .work-process-view1-wrap {
   float: left;
