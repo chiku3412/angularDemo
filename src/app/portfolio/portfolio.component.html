@@ -21,7 +21,7 @@
 
                     <div class="filter-box">
                         <div class="row">
-                            <div class="col-lg-4 col-md-6 col-12" *ngFor="let filterBox of manageFilterBoxes" [ngClass]="{'fadeIn':(portFolioNameActive === filterBox.name)}">
+                            <div class="col-lg-4 col-md-6 col-12 my-2" *ngFor="let filterBox of manageFilterBoxes" [ngClass]="{'fadeIn':(portFolioNameActive === filterBox.name)}">
                                 <div class="box">
                                     <img [src]="filterBox.filterBoxImage" class="img-fluid" alt="Images" />
                                     <div class="content">

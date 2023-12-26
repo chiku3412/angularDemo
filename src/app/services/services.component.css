@@ -1,6 +1,11 @@
 .service-section {
   padding: 100px 0;
 }
+@media screen and (max-width: 991px) {
+  .service-section {
+    padding: 50px 0;
+  }
+}
 .service-section .fancy-title-view1 h2,
 .service-section .fancy-title-view1 p {
   color: #000;

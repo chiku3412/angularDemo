@@ -1,1 +1,37 @@
-<p>technology works!</p>
+<section class="technology-section" id="technology">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="fancy-title-view1">
+                    <h2>Our Technology</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.
+                        Etiam in dui velit Fusce accumsan.</p>
+                </div>
+            </div>
+        </div>
+        <div class="technology-dept">
+            <div class="nav flex-column nav-pills me-0 me-lg-3" id="v-pills-tab"
+                role="tablist" aria-orientation="vertical">
+                <button class="nav-link my-2" [ngClass]="{'active':(portFolioNameActive === technoBtn.technoId)}" *ngFor="let technoBtn of technoBtns"
+                    data-bs-toggle="pill" type="button" (click)="handleTechnology(technoBtn.technoId)">
+                    {{ technoBtn.technoName }}
+                </button>
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade" [ngClass]="{'show active':(portFolioNameActive === technologyImg.technoId)}" *ngFor="let technologyImg of technologyImage">
+                    <div class="d-flex flex-wrap align-items-center justify-content-lg-start justify-content-center">
+                        <div *ngFor="let technoImg of manageTechnologyFilter">
+                            <div class="technology-image mx-2 mt-2" >
+                                <img [src]="technoImg.img" alt="Images" class="img-fluid">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#4899f0" fill-opacity="1" d="M0,128L12,154.7C24,181,48,235,72,256C96,277,120,267,144,218.7C168,171,192,85,216,74.7C240,64,264,128,288,154.7C312,181,336,171,360,154.7C384,139,408,117,432,144C456,171,480,245,504,256C528,267,552,213,576,208C600,203,624,245,648,245.3C672,245,696,203,720,165.3C744,128,768,96,792,90.7C816,85,840,107,864,133.3C888,160,912,192,936,218.7C960,245,984,267,1008,250.7C1032,235,1056,181,1080,154.7C1104,128,1128,128,1152,144C1176,160,1200,192,1224,208C1248,224,1272,224,1296,229.3C1320,235,1344,245,1368,245.3C1392,245,1416,235,1428,229.3L1440,224L1440,320L1428,320C1416,320,1392,320,1368,320C1344,320,1320,320,1296,320C1272,320,1248,320,1224,320C1200,320,1176,320,1152,320C1128,320,1104,320,1080,320C1056,320,1032,320,1008,320C984,320,960,320,936,320C912,320,888,320,864,320C840,320,816,320,792,320C768,320,744,320,720,320C696,320,672,320,648,320C624,320,600,320,576,320C552,320,528,320,504,320C480,320,456,320,432,320C408,320,384,320,360,320C336,320,312,320,288,320C264,320,240,320,216,320C192,320,168,320,144,320C120,320,96,320,72,320C48,320,24,320,12,320L0,320Z"></path></svg>
+                            </div>
+                            <h6 class="mx-2 mb-2">
+                                {{ technoImg.technoName }}
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

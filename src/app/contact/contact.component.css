@@ -1,6 +1,11 @@
 .contact_us {
   padding: 100px 0px;
 }
+@media screen and (max-width: 991px) {
+  .contact_us {
+    padding: 50px 0;
+  }
+}
 .contact_us .contact_inner {
   background-color: #fff;
   position: relative;

@@ -2,6 +2,11 @@ section {
   padding: 100px 0;
   box-shadow: 0px 15px 10px -15px #dcdcdc;
 }
+@media screen and (max-width: 991px) {
+  section {
+    padding: 50px 0;
+  }
+}
 section .sec-title {
   position: relative;
   z-index: 1;
@@ -77,6 +82,11 @@ section.about-section {
 section.about-section .image-column {
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  section.about-section .image-column {
+    overflow: hidden;
+  }
+}
 section.about-section .image-column .inner-column {
   position: relative;
   padding-left: 120px;
@@ -131,6 +141,20 @@ section.about-section .image-column .image-2 {
 section.about-section .image-column .image-2 img {
   box-shadow: 0 30px 50px rgba(8, 13, 62, 0.15);
 }
+section.about-section .image-column .image-rotate .bg-image {
+  position: absolute;
+  top: 0;
+  left: -20%;
+  right: 0;
+  z-index: -1;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  section.about-section .image-column .image-rotate .bg-image {
+    left: 0;
+  }
+}
 
 @media (min-width: 991px) and (max-width: 1400px) {
   .outer-circle {
@@ -157,5 +181,15 @@ section.about-section .image-column .image-2 img {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes rotateme {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
   }
 }

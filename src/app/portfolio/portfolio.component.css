@@ -2,6 +2,11 @@
   padding: 100px 0;
   background-color: #fafafa;
 }
+@media screen and (max-width: 991px) {
+  .portfolio-section {
+    padding: 50px 0;
+  }
+}
 .portfolio-section .fancy-title-view1 h2, .portfolio-section .fancy-title-view1 p {
   color: #000;
 }
@@ -10,6 +15,7 @@
   padding: 0;
   margin-bottom: 50px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .portfolio-section .filter-section ul li {
   margin: 0 10px;

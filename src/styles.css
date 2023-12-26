@@ -102,6 +102,13 @@
     transform: rotateY(1turn);
   }
 }
+.bg-bottom {
+  background: url(../../assets/Images/banner-waves-3_iwmett.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 * {
   margin: 0;
   padding: 0;

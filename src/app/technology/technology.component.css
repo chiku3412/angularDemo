@@ -1,0 +1,104 @@
+.technology-section {
+  padding: 100px 0;
+}
+@media screen and (max-width: 991px) {
+  .technology-section {
+    padding: 50px 0;
+  }
+}
+.technology-section .fancy-title-view1 h2, .technology-section .fancy-title-view1 p {
+  color: #000;
+}
+.technology-section .technology-dept {
+  border: 1px solid #dcdcdc;
+  padding: 10px;
+  display: flex;
+  align-self: start;
+}
+@media screen and (max-width: 991px) {
+  .technology-section .technology-dept {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .technology-section .technology-dept .nav-pills {
+    justify-content: center;
+    flex-direction: row !important;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .technology-section .technology-dept .nav-pills {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.technology-section .technology-dept .nav-pills .nav-link {
+  color: #000;
+  transition: all 0.5s;
+  border-radius: unset;
+  border-left: 5px solid #ffffff;
+  width: 220px;
+}
+@media screen and (max-width: 991px) {
+  .technology-section .technology-dept .nav-pills .nav-link {
+    width: 217px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+  }
+}
+.technology-section .technology-dept .nav-pills .nav-link.active, .technology-section .technology-dept .nav-pills .nav-link:hover {
+  background-color: #ffffff !important;
+  box-shadow: 0 0 10px #dcdcdc !important;
+  border-left: 5px solid #4899f0;
+  transition: all 0.5s;
+}
+.technology-section .technology-dept .tab-content .technology-image {
+  height: 100px;
+  padding: 10px;
+  width: 190px;
+  object-fit: cover;
+  display: block;
+  box-shadow: inset 0 0 10px #dcdcdc;
+  border-bottom: 3px solid #4899f0;
+  cursor: pointer;
+  transition: all 0.5s;
+  position: relative;
+  text-align: center;
+}
+.technology-section .technology-dept .tab-content .technology-image::after {
+  background-color: #4899f0;
+  height: 0;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  transition: all 0.5s;
+}
+.technology-section .technology-dept .tab-content .technology-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  position: relative;
+  z-index: 999;
+}
+.technology-section .technology-dept .tab-content .technology-image svg {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+}
+.technology-section .technology-dept .tab-content .technology-image:hover::after {
+  height: 100px;
+  transition: all 0.5s;
+}
+.technology-section .technology-dept .tab-content h6 {
+  margin: 0;
+  color: #ffffff;
+  background-color: #4899f0;
+  padding: 5px;
+  text-align: center;
+}

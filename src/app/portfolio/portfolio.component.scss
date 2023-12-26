@@ -3,6 +3,9 @@
 .portfolio-section {
     padding: 100px 0;
     background-color: $bg-gray;
+    @media screen and (max-width: 991px) {
+        padding: 50px 0;
+    }
     .fancy-title-view1 {
         h2, p {
             color: $black;
@@ -14,6 +17,7 @@
             padding: 0;
             margin-bottom: 50px;
             justify-content: center;
+            flex-wrap: wrap;
             li {
                 margin: 0 10px;
                 a {

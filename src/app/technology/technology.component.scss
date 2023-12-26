@@ -1,0 +1,104 @@
+@import '../../assets/css/color.scss';
+
+.technology-section {
+    padding: 100px 0;
+    @media screen and (max-width: 991px) {
+        padding: 50px 0;
+    }
+    .fancy-title-view1 {
+        h2, p {
+            color: $black;
+        }
+    }
+    .technology-dept {
+        border: 1px solid $gainsboro;
+        padding: 10px;
+        display: flex;
+        align-self: start;
+        @media screen and (max-width: 991px) {
+            display: block;
+        }
+        .nav-pills {
+            @media screen and (max-width: 767px) {
+                justify-content: center;
+                flex-direction: row !important;
+            }
+            @media (min-width:767px) and (max-width: 991px) {
+                flex-direction: row !important;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .nav-link {
+                color: $black;
+                transition: all 0.5s;
+                border-radius: unset;
+                border-left: 5px solid $white;
+                width: 220px;
+                @media screen and (max-width:991px) {
+                    width: 217px;
+                    border: 1px solid $gainsboro;
+                    border-radius: 10px;
+                }
+                &.active, &:hover {
+                    background-color: $white !important;
+                    box-shadow: 0 0 10px $gainsboro !important;
+                    border-left: 5px solid $main-color;
+                    transition: all 0.5s;
+                }
+            }
+        }
+        .tab-content {
+            .technology-image {
+                height: 100px;
+                padding: 10px;
+                width: 190px;
+                object-fit: cover;
+                display: block;
+                box-shadow: inset 0 0 10px $gainsboro;
+                border-bottom: 3px solid $main-color;
+                cursor: pointer;
+                transition: all 0.5s;
+                position: relative;
+                text-align: center;
+                &::after {
+                    background-color: $main-color;
+                    height: 0;
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    z-index: 99;
+                    transition: all 0.5s;
+                }
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    border-radius: 50%;
+                    position: relative;
+                    z-index: 999;
+                }
+                svg {
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    width: 100%;
+                }
+                &:hover {
+                    &::after {
+                        height: 100px;
+                        transition: all 0.5s;
+                    }
+                }
+            }
+            h6 {
+                margin: 0;
+                color: $white;
+                background-color: $main-color;
+                padding: 5px;
+                text-align: center;    
+            }
+        }
+    }
+}
