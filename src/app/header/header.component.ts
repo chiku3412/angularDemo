@@ -7,25 +7,7 @@ import { HeaderService } from '../service/header.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  menuItems = [
-    { label: 'Home', link: '#home', isActive:true, id:'home' },
-    { label: 'About', link: '#about', isActive:false, id:'about' },
-    { label: 'Services', link: '#service', isActive:false,id:'service',
-    subItems: [
-        { label: 'Web Development', link: '#service' },
-        { label: 'Angular Development', link: '#service' },
-        { label: 'UI UX Design', link: '#service' },
-        { label: 'Mobile App Development', link: '#service' },
-        { label: 'E-commerce Development', link: '#service' },
-        { label: 'React JS Development', link: '#service' }
-      ]
-    },
-    { label: 'Portfolio', link: '#portfolio',isActive:false,id:'portfolio' },
-    { label: 'Work Process', link: '#workprocess',isActive:false,id:'workProcess' },
-    { label: 'Technology', link: '#technology',isActive:false,id:'technology' },
-    { label: 'Contact Us', link: '#contactus',isActive:false,id:'contactUs' },
-    { label: 'Career', link: 'career.html',isActive:false,id:'career' }
-  ];
+ 
 
   isScrolled = false;
 
@@ -55,7 +37,7 @@ export class HeaderComponent {
   scrollTo(menuItem: any): void {
     menuItem.isActive = true;
 
-    this.menuItems.forEach(item => {
+    this.headerService.menuItems.forEach(item => {
       if (item !== menuItem) {
         item.isActive = false;
       }
@@ -67,6 +49,10 @@ export class HeaderComponent {
     }
   }
 
+  activeHeaderMenu(id:string) {
+    this.headerService.headerMenu = id;
+  }
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.updateActiveMenuItem();
@@ -75,7 +61,7 @@ export class HeaderComponent {
 
   private updateActiveMenuItem(): void {
     // Iterate through menu items and set isActive based on scroll position
-    this.menuItems.forEach(item => {
+    this.headerService.menuItems.forEach(item => {
       const sectionElement = document.getElementById(item.id);
       if (sectionElement) {
         const rect = sectionElement.getBoundingClientRect();

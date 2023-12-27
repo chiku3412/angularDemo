@@ -8,11 +8,11 @@
         </button>
         <div class="justify-content-end d-lg-block d-none" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item mx-1 mx-xl-2 dropdown-sec" *ngFor="let menuItem of menuItems">
+                <li class="nav-item mx-1 mx-xl-2 dropdown-sec" *ngFor="let menuItem of headerService.menuItems">
                     <!-- <a class="nav-link scrollto" [routerLink]="menuItem.link" [ngClass]="{'active': menuItem.isActive}" (click)="headerActive(menuItem.link)">
                         {{ menuItem.label }} <i *ngIf="menuItem.subItems" class="fas fa-angle-down ms-2"></i>
                     </a> -->
-                    <a class="nav-link scrollto" [routerLink]="menuItem.link" routerLinkActive="active" [ngClass]="{'active': menuItem.isActive}" (click)="scrollTo(menuItem)">
+                    <a class="nav-link scrollto" [routerLink]="menuItem.link" routerLinkActive="active" [ngClass]="{'active': menuItem.isActive}" (click)="scrollTo(menuItem);activeHeaderMenu(menuItem.id)">
                         {{ menuItem.label }} <i *ngIf="menuItem.subItems" class="fas fa-angle-down ms-2"></i>
                     </a>
                     <ul class="dropdown-section" aria-labelledby="navbarDropdown" *ngIf="menuItem.subItems">
@@ -31,7 +31,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item mx-2 dropdown-sec" *ngFor="let menuItem of menuItems">
+                <li class="nav-item mx-2 dropdown-sec" *ngFor="let menuItem of headerService.menuItems">
                     <a class="nav-link scrollto" [routerLink]="menuItem.link">
                         {{ menuItem.label }} <i *ngIf="menuItem.subItems" class="fas fa-angle-down ms-2"></i>
                     </a>

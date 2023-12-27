@@ -1,9 +1,4 @@
 <app-header></app-header>
-<app-home-banner></app-home-banner>
-<app-about></app-about>
-<app-services></app-services>
-<app-portfolio></app-portfolio>
-<app-work-process></app-work-process>
-<app-technology></app-technology>
-<app-contact></app-contact>
+<app-main-page *ngIf="headerService.headerMenu!=='career'"></app-main-page>
+<app-career *ngIf="headerService.headerMenu==='career'"></app-career>
 <app-footer></app-footer>

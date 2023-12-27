@@ -6,14 +6,18 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { HomeBannerComponent } from './home-banner/home-banner.component';
-import { AboutComponent } from './about/about.component';
-import { ServicesComponent } from './services/services.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
-import { WorkProcessComponent } from './work-process/work-process.component';
-import { TechnologyComponent } from './technology/technology.component';
+import { CareerComponent } from './career/career.component';
+import { VacancyComponent } from './career/vacancy/vacancy.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { HomeBannerComponent } from './main-page/home-banner/home-banner.component';
+import { AboutComponent } from './main-page/about/about.component';
+import { ServicesComponent } from './main-page/services/services.component';
+import { PortfolioComponent } from './main-page/portfolio/portfolio.component';
+import { ContactComponent } from './main-page/contact/contact.component';
+import { WorkProcessComponent } from './main-page/work-process/work-process.component';
+import { TechnologyComponent } from './main-page/technology/technology.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +30,10 @@ import { TechnologyComponent } from './technology/technology.component';
     ContactComponent,
     FooterComponent,
     WorkProcessComponent,
-    TechnologyComponent
+    TechnologyComponent,
+    CareerComponent,
+    VacancyComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
