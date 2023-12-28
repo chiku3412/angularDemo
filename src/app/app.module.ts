@@ -17,6 +17,8 @@ import { PortfolioComponent } from './main-page/portfolio/portfolio.component';
 import { ContactComponent } from './main-page/contact/contact.component';
 import { WorkProcessComponent } from './main-page/work-process/work-process.component';
 import { TechnologyComponent } from './main-page/technology/technology.component';
+import { TopBannerComponent } from './career/top-banner/top-banner.component';
+import { ContactDetailsComponent } from './career/contact-details/contact-details.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { TechnologyComponent } from './main-page/technology/technology.component
     TechnologyComponent,
     CareerComponent,
     VacancyComponent,
-    MainPageComponent
+    MainPageComponent,
+    TopBannerComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,

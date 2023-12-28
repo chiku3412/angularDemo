@@ -1,1 +1,54 @@
-<p>vacancy works!</p>
+<section class="py-5 vacancy-section">
+    <div class="container">
+        <div class="filter-section">
+            <div class="row">
+                <ng-container *ngFor="let select of selects">
+                    <div class="col-3">
+                        <select class="form-select"
+                            aria-label="Default select example">
+                            <option *ngFor="let option of select.options"
+                                [value]="option.value"
+                                [selected]="option.default">
+                                {{ option.label }}
+                            </option>
+                        </select>
+                    </div>
+                </ng-container>
+                <div class="col-3">
+                    <button class="btn-solid w-100">
+                        Filter
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="vacancy">
+            <div class="filter-section mt-5" *ngFor="let filterVacancy of Filters">
+                <h2>
+                    {{ filterVacancy.vacancyTitle }}
+                </h2>
+                <div class="box">
+                    <ul>
+                        <li>
+                            <b>Category</b> : {{filterVacancy.category}}
+                        </li>
+                        <li>|</li>
+                        <li>
+                            <b>Location</b> : {{ filterVacancy.location }}
+                        </li>
+                        <li>|</li>
+                        <li>
+                            <b>Job Type</b> : {{ filterVacancy.jobType }}
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn-solid me-3">
+                    Read More
+                </button>
+                <button class="btn-solid">
+                    Apply
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

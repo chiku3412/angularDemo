@@ -7,7 +7,6 @@ import { HeaderService } from '../service/header.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
- 
 
   isScrolled = false;
 

@@ -1,0 +1,30 @@
+@import '../../../assets/css/color.scss';
+
+.contact-details {
+    background-color: rgb(233 237 251);
+    padding: 100px 0;
+    .main-section {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 24px;
+        border-radius: 2rem;
+        border: solid 2px #fff;
+    }
+    .contact-sec {
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 3rem;
+        border-radius: 1.5rem;
+        border: solid 1px #dfdfdf;
+        box-shadow: 0px 7px 8px 3px rgba(0,0,0,0.05);
+        i {
+            font-size: 28px;
+        }
+        h4 {
+            margin: 10px 0;
+            font-weight: 600;
+        }
+        h6 {
+            margin: 0;
+        }
+    }
+}

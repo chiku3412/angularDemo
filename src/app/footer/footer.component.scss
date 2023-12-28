@@ -1,16 +1,70 @@
-.bg-effect {
-    background-image: url(../../assets/Images/banner-waves-3_iwmett.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 195px;
-    width: 100%;
+@import '../../assets/css/color.scss';
+
+.footer {
     position: relative;
-    .copyright-section {
+    width: 100%;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+        color: $white;
+        margin: 15px 0 10px 0;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    .wave {
         position: absolute;
-        bottom: 0;
+        top: -100px;
         left: 0;
         width: 100%;
-        text-align: center;
+        height: 100px;
+        background: url("https://i.ibb.co/wQZVxxk/wave.png");
+        background-size: 1000px 100px;
+        &#wave1 {
+            z-index: 1000;
+            opacity: 1;
+            bottom: 0;
+            animation: animateWaves 4s linear infinite;
+        }
+        &#wave2 {
+            z-index: 999;
+            opacity: 0.5;
+            bottom: 10px;
+            animation: animate 4s linear infinite !important;
+        }
+        &#wave3 {
+            z-index: 1000;
+            opacity: 0.2;
+            bottom: 15px;
+            animation: animateWaves 3s linear infinite;
+        }
+        &#wave4 {
+            z-index: 999;
+            opacity: 0.7;
+            bottom: 20px;
+            animation: animate 3s linear infinite;
+        }
+    }
+}
+
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-positon-x: 0px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: -1000px;
+    }
+    100% {
+        background-positon-x: 0px;
     }
 }
