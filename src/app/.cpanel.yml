@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cktechno/public_html/angular-chiragpatel-info
+    - /bin/cp * $DEPLOYPATH
