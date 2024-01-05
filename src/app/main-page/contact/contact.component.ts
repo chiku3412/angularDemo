@@ -31,6 +31,8 @@ export class ContactComponent {
       console.log('Name:', name);
       console.log('Email:', email);
       console.log('Message:', message);
+      const formData = `Name : ${name}\nEmail : ${email}\nMessage : ${message}`;
+      alert(formData);
     }
     // this.myForm.reset();
     this.showModal = true;

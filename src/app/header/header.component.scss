@@ -8,8 +8,6 @@
     top: 0;
     left: 0;
     transition: all 0.5s;
-    // box-shadow: 0 0 10px $gainsboro;
-
     &.scrolled {
         background-color: $white;
         display: block;
@@ -17,7 +15,6 @@
         position: fixed !important;
         transition: all 0.5s;
     }
-    
     .navbar-brand {
         font-size: 26px;
         font-weight: 600;
@@ -30,7 +27,6 @@
             font-weight: normal;
         }
     }
-
     .navbar-nav {
         .nav-item {
             text-align: center;
@@ -139,7 +135,6 @@
             }
         }
     }
-
     button {
         border: none;
         &:focus {
@@ -153,7 +148,6 @@
         }
     }
 }
-
 @media screen and (max-width: 500px) {
     .navbar-brand {
         font-size: 23px !important;
@@ -163,7 +157,6 @@
         }
     }
 }
-
 @media screen and (max-width: 991px) {
     .navbar {
         padding: 10px 0 !important;
