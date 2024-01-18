@@ -43,3 +43,11 @@
     //     background: linear-gradient(to bottom,#d5fefd,#e0fdff,#effbff,#fbfaff,#fffcff);
     // }
 }
+:host ::ng-deep {
+    p-dialog {
+        .p-element {
+            padding: 20px;
+            background-color: #fff;
+        }
+    }
+}

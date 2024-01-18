@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from   './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,9 @@ import { WorkProcessComponent } from './main-page/work-process/work-process.comp
 import { TechnologyComponent } from './main-page/technology/technology.component';
 import { TopBannerComponent } from './career/top-banner/top-banner.component';
 import { ContactDetailsComponent } from './career/contact-details/contact-details.component';
+
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
@@ -43,7 +47,10 @@ import { ContactDetailsComponent } from './career/contact-details/contact-detail
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    DialogModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

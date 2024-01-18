@@ -14,7 +14,7 @@
                                         Feel Free to contact us any time. We will get back to you as soon as we can!.
                                     </p>
                                     <!-- get the data using form control Name -->
-                                    <form [formGroup]="myForm">
+                                    <form action="javascript:void(0)" [formGroup]="myForm" (submit)="send()">
                                         <!-- <p>
                                             {{myForm.value|json}}
                                         </p> -->
@@ -31,7 +31,10 @@
                                         <div *ngIf="firstGroup['message']?.invalid && isSubmitted" class="error-message">
                                             Message is required.
                                           </div>
-                                        <button type="submit" class="btn-solid mt-4 w-50" (click)="onShowData()">
+                                        <!-- <button type="submit" class="btn-solid mt-4 w-50" (click)="onShowData()">
+                                            <span>&#10145;</span> Submit
+                                        </button> -->
+                                        <button type="submit" class="btn-solid mt-4 w-50">
                                             <span>&#10145;</span> Submit
                                         </button>
                                     </form>
