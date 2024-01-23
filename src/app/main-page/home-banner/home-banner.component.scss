@@ -1,7 +1,7 @@
 @import '../../../assets/css/color.scss';
 
 .home-banner-section {
-    background: url(https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background: url(../../../assets/Images/home-banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -13,7 +13,7 @@
     .gradient {
         &:after {
             content: "";
-            background: linear-gradient(-45deg, rgba(35, 189, 232, 0.7), rgba(12, 54, 210, 0.75));
+            // background: linear-gradient(-45deg, rgba(35, 189, 232, 0.7), rgba(12, 54, 210, 0.75));
             position: absolute;
             height: 100%;
             width: 100%;   
@@ -22,17 +22,36 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            top: 50%;
+            top: 30%;
             width: 100%;
             position: absolute;
             z-index: 99;
+            text-align: center;
             h1 {
                 color: $white;
-                font-size: 4rem;
+                font-size: 120px;
                 text-align: center;
                 text-shadow: 1px 2px 7px #222;
                 z-index: 10;
                 margin: 0;
+                strong {
+                    color: transparent;
+                    -webkit-text-stroke: 1px #d0d6f5;
+                }
+                small {
+                    font-size: 24px;
+                    display: block;
+                }
+                @media screen and (max-width:767px) {
+                    font-size: 55px;
+                }
+            }
+            .banner-desription {
+                color: $white;
+                font-weight: 600;
+                font-size: 24px;
+                margin-top: 20px;
+                letter-spacing: 1px;
             }
         }
     }

@@ -8,17 +8,22 @@
     top: 0;
     left: 0;
     transition: all 0.5s;
+    color: $white;
     &.scrolled {
         background-color: $white;
         display: block;
         margin-top: 0 !important;
         position: fixed !important;
         transition: all 0.5s;
+        .navbar-brand, .nav-link {
+            color: $black !important;
+        }
     }
     .navbar-brand {
         font-size: 26px;
         font-weight: 600;
         padding: 0;
+        color: $white;
         img {
             max-width: 50px;
             margin-right: 10px;
@@ -31,6 +36,7 @@
         .nav-item {
             text-align: center;
             .nav-link {
+                color: $white;
                 position: relative;
                 transition: all 0.5s;
                 padding: 24px 10px;
@@ -42,7 +48,10 @@
                     padding: 24px 5px;
                 }
                 &.active {
-                    color: $black;
+                    color: $main-color !important;
+                }
+                &:hover {
+                    color: $main-color !important;
                 }
                 &:before {
                     content: '';
@@ -50,7 +59,7 @@
                     top: 0;
                     left: 0;
                     z-index: 999;
-                    background-color: $black;
+                    background-color: $main-color;
                     width: 0;
                     height: 2px;
                     opacity: 0;
