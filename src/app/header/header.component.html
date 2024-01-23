@@ -26,14 +26,14 @@
                 </li>
             </ul>
         </div>
-        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" #offcanvasExample>
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasExampleLabel">Skyline Infosoft</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <ul class="navbar-nav mb-2 mb-lg-0">
                 <li class="nav-item mx-2 dropdown-sec" *ngFor="let menuItem of headerService.menuItems">
-                    <a class="nav-link scrollto" [routerLink]="menuItem.link">
+                    <a class="nav-link scrollto" [routerLink]="menuItem.link" routerLinkActive="active" [ngClass]="{'active': menuItem.isActive}" (click)="scrollTo(menuItem);activeHeaderMenu(menuItem.id)">
                         {{ menuItem.label }} <i *ngIf="menuItem.subItems" class="fas fa-angle-down ms-2"></i>
                     </a>
                     <ul class="dropdown-section" aria-labelledby="navbarDropdown" *ngIf="menuItem.subItems">

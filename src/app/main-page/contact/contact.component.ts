@@ -24,7 +24,7 @@ export class ContactComponent {
   get firstGroup() {
     return this.myForm.controls;
   }
-  onShowData(): void {
+  async onShowData() {
     this.isSubmitted = true;
     if(this.myForm.valid){
       this.isSubmitted = false;
@@ -33,27 +33,36 @@ export class ContactComponent {
       console.log('Name:', name);
       console.log('Email:', email);
       console.log('Message:', message);
-      const formData = `Name : ${name}\nEmail : ${email}\nMessage : ${message}`;
-      alert(formData);
+      // const formData = `Name : ${name}\nEmail : ${email}\nMessage : ${message}`;
+      // alert(formData);
+
+      emailjs.init('aXVZEYif-cXX4vkrM');
+      let response = await emailjs.send("service_i9j2l78","template_wxt9l3a",{
+        name: this.myForm.value.name,
+        to_name: this.myForm.value.to_name,
+        email: this.myForm.value.email,
+        message: this.myForm.value.message,
+      });
+      alert('Message Send');
     }
-    // this.myForm.reset();
-    this.showModal = true;
+    this.myForm.reset();
+    // this.showModal = true;
 
     
 
   }
 
-  async send() {
-    emailjs.init('aXVZEYif-cXX4vkrM');
-    let response = await emailjs.send("service_i9j2l78","template_wxt9l3a",{
-      name: this.myForm.value.name,
-      to_name: this.myForm.value.to_name,
-      email: this.myForm.value.email,
-      message: this.myForm.value.message,
-    });
-    alert('Message Send');
-    this.myForm.reset;
-  }
+  // async send() {
+  //   emailjs.init('aXVZEYif-cXX4vkrM');
+  //   let response = await emailjs.send("service_i9j2l78","template_wxt9l3a",{
+  //     name: this.myForm.value.name,
+  //     to_name: this.myForm.value.to_name,
+  //     email: this.myForm.value.email,
+  //     message: this.myForm.value.message,
+  //   });
+  //   alert('Message Send');
+  //   this.myForm.reset;
+  // }
 
   // using id
   // onSubmit(): void {

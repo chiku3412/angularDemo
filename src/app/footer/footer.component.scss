@@ -1,5 +1,4 @@
 @import '../../assets/css/color.scss';
-
 .footer {
     position: relative;
     width: 100%;
@@ -10,7 +9,7 @@
     flex-direction: column;
     p {
         color: $black;
-        margin: 15px 0 10px 0;
+        margin: 55px 0 10px 0;
         font-size: 1rem;
         font-weight: 300;
         position: absolute;
@@ -51,13 +50,12 @@
         }
     }
 }
-
 @keyframes animateWaves {
     0% {
         background-position-x: 1000px;
     }
     100% {
-        background-positon-x: 0px;
+        background-position-x: 0px;
     }
 }
 
@@ -66,6 +64,6 @@
         background-position-x: -1000px;
     }
     100% {
-        background-positon-x: 0px;
+        background-position-x: 0px;
     }
 }
